@@ -1,0 +1,5 @@
+package com.cravemate.pojos;
+
+public class BaseEntity {
+
+}
