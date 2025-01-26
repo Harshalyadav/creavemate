@@ -1,11 +1,6 @@
 package com.cravemate.pojos;
 
 import java.util.List;
-
-
-import com.pojos.addon.AddOn;
-import com.pojos.reviews.Review;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,9 +36,14 @@ public class Food extends BaseEntity{
 	 private boolean ContainsEgg;
 	 
 
+//	 @Lob
+//	 @OneToMany(mappedBy = "food", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+//	 private byte[] photos;
+	 
 	 @Lob
-	 @OneToMany(mappedBy = "food", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	 @Column(nullable = false)
 	 private byte[] photos;
+
 	 
 	 @Column(nullable = false)
 	 private double price;
@@ -57,13 +57,23 @@ public class Food extends BaseEntity{
 		this.price = price;
 	}
 	 private String category;
-	 @OneToMany(mappedBy = "addOns", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-	 private List<AddOn> addOns;
+	 
+//	 @OneToMany(mappedBy = "addOns", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+//	 private List<AddOn> addOns;
+	 @OneToMany(mappedBy = "food", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	 private List<Addon> addOns;
+
+//	 @ManyToOne(fetch = FetchType.LAZY)
+//	 @JoinColumn(name = "restaurant_id", nullable = false)
+//	 private String restaurant;
 	 
 	 @ManyToOne(fetch = FetchType.LAZY)
 	 @JoinColumn(name = "restaurant_id", nullable = false)
-	 private String restaurant;
-	 @OneToMany(mappedBy = "reviews", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	 private Restaurant restaurant;
+
+	 
+	 
+	 @OneToMany(mappedBy = "food", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 	 private List<Review> reviews;
 
 
