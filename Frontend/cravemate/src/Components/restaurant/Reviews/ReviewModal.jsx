@@ -142,7 +142,7 @@ export default function ReviewModal({ isOpen, setIsOpen, ...props }) {
                         placeholder="amazing food"
                         value={reviewData.subject}
                         onChange={handlechange}
-                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
+                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-cravemate-400"
                       />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -153,7 +153,7 @@ export default function ReviewModal({ isOpen, setIsOpen, ...props }) {
                         rows="5"
                         value={reviewData.reviewText}
                         onChange={handlechange}
-                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
+                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-cravemate-400"
                       ></textarea>
                     </div>
                   </form>

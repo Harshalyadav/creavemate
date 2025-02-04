@@ -27,7 +27,7 @@ const RestaurantCard = (props,setRestaurantList1) => {
   useEffect(() => {
     // setImage()
 
-    console.log("Data",props.photos)
+    console.log("Data111",props._id)
     
     props &&
     setImage(props.photos)
@@ -45,7 +45,7 @@ const RestaurantCard = (props,setRestaurantList1) => {
           <div className="absolute w-full bottom-4 flex items-end justify-between">
             <div className="flex flex-col gap-2 items-start">
               {props.isPro && (
-                <span className="bg-zomato-400 text-white px-2 py-1 rounded text-sm">
+                <span className="bg-cravemate-400 text-white px-2 py-1 rounded text-sm">
                   Pro extra 10% off
                 </span>
               )}
@@ -68,7 +68,7 @@ const RestaurantCard = (props,setRestaurantList1) => {
           />
  
         </div>
-        {/* <div className="my-2 flex flex-col gap-2">
+        <div className="my-2 flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <h4 className="text-xl font-medium">{props.name}</h4>
             <span className="bg-green-800 text-white text-sm p-1 rounded flex items-center">
@@ -76,11 +76,11 @@ const RestaurantCard = (props,setRestaurantList1) => {
             </span>
           </div>
           <div className="flex items-center justify-between text-gray-500">
-            {/* <p>{props.cuisine?.join(", ")}</p> 
-            {/* <p>{props.cuisine}</p>
+             {/* <p>{props.cuisine?.join(", ")}</p>  */}
+             <p>{props.cuisine}</p>
             <p>₹ {props.averageCost} for one</p>
           </div>
-        </div> */}
+        </div>
       </div>
 
      

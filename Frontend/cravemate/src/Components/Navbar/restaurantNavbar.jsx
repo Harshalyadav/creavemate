@@ -29,7 +29,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
         />
       </div>
       <div className="flex items-center gap-3">
-        <button className="bg-zomato-400 text-white py-2 px-3 rounded-full">
+        <button className="bg-cravemate-400 text-white py-2 px-3 rounded-full">
           Use App
         </button>
         {reduxState?.user?.fullname ? (
@@ -37,7 +37,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
             {" "}
             <div
               onClick={() => setIsDropDownOpen((prev) => !prev)}
-              className="border p-2 border-gray-300 text-zomato-400 w-20 h-20 rounded-full"
+              className="border p-2 border-gray-300 text-cravemate-400 w-20 h-20 rounded-full"
             >
               <img
                 src={gravatar.url(reduxState?.user?.email)}
@@ -55,7 +55,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
           <>
             <span
               onClick={() => setIsDropDownOpen((prev) => !prev)}
-              className="border p-2 border-gray-300 text-zomato-400 rounded-full"
+              className="border p-2 border-gray-300 text-cravemate-400 rounded-full"
             >
               <FaUserAlt />
             </span>
@@ -90,7 +90,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
           </div>
           <div className=" w-3/4 bg-white shadow-md p-3 flex items-center gap-3  border border-gray-200 rounded">
             <div className="flex items-center gap-2 border-r-2 border-gray-300 pr-2">
-              <span className="text-zomato-400">
+              <span className="text-cravemate-400">
                 <HiLocationMarker />
               </span>
               <input
@@ -114,7 +114,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
               {" "}
               <div
                 onClick={() => setIsDropDownOpen((prev) => !prev)}
-                className="border p-2 border-gray-300 text-zomato-400 w-full h-20 rounded-full"
+                className="border p-2 border-gray-300 text-cravemate-400 w-full h-20 rounded-full"
               >
                 <img
                   src={gravatar.url(reduxState?.user?.email)}

@@ -2,7 +2,7 @@
 import React from "react";
 import { BsShieldLockFill } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
-import Razorpay from "razorpay";
+// import Razorpay from "razorpay";
 
 // components
 import CartContainer from "../Components/Cart/CartContainer";
@@ -55,8 +55,8 @@ const Checkout = () => {
       theme: { color: "#e23744" },
     };
 
-    let razorPay = new window.Razorpay(options);
-    razorPay.open();
+    // let razorPay = new window.Razorpay(options);
+    // razorPay.open();
   };
 
   return (
@@ -82,7 +82,7 @@ const Checkout = () => {
         </div>
         <button
           onClick={payNow}
-          className="flex items-center gap-2 justify-center my-4 md:my-8 w-full px-4 md:w-4/5 px-0 h-14 text-white font-medium text-lg bg-zomato-400 rounded-lg"
+          className="flex items-center gap-2 justify-center my-4 md:my-8 w-full px-4 md:w-4/5 px-0 h-14 text-white font-medium text-lg bg-cravemate-400 rounded-lg"
         >
           Pay Securely <BsShieldLockFill />
         </button>

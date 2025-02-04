@@ -34,7 +34,7 @@ const CartSM = ({ toggle }) => {
         </div>
         <button
           onClick={continueToCheckout}
-          className="flex items-center gap-1 bg-zomato-400 px-3 py-1 text-white rounded-lg"
+          className="flex items-center gap-1 bg-cravemate-400 px-3 py-1 text-white rounded-lg"
         >
           Continue <IoMdArrowDropright />
         </button>
@@ -68,7 +68,7 @@ const CartLg = ({ toggle }) => {
           </h4>
           <button
             onClick={continueToCheckout}
-            className="flex items-center text-lg h-10 font-light gap-1 bg-zomato-400 px-3 py-1 text-white rounded-lg"
+            className="flex items-center text-lg h-10 font-light gap-1 bg-cravemate-400 px-3 py-1 text-white rounded-lg"
           >
             Continue <IoMdArrowDropright />
           </button>

@@ -27,19 +27,20 @@ const Brand = (props) => {
         PrevArrow:<PrevArrow/>,
        };
     return (<>
+      <div className="my-10 mb-20">
         <Slider{...settings}>
-        {logos.map((logo)=>{
-            <div className="w-32 h-48 mx-10 bg-white shadow">
+        {logos.map((logo)=>(
+            <div className="w-3 h-48 mx-10 bg-white shadow">
             <img
               src={logo}
               alt="brand"
               className="w-full h-full object-cover"
             />          
          </div>
-        })}
-
-
-</Slider>  </>
+        ))}
+   </Slider>  
+   </div>
+</>
     );
 };
 

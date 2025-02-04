@@ -30,7 +30,7 @@ const MenuCollection = (props) => {
         > 
           <div className="h-full w-full overflow-hidden rounded-lg">
             <img 
-            src={props.image}
+            src={props.image[0]}
             alt="menu"
             className="w-full h-full transform rounded-lg transition duration-400 hover:scale-110"
             />     
