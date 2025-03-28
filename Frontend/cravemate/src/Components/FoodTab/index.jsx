@@ -36,14 +36,14 @@ const MobileTabs = () => {
             <div
               className={
                 type === items.id
-                  ? "flex flex-col relative items-center text-xl text-zomato-400 "
+                  ? "flex flex-col relative items-center text-xl text-cravemate-400 "
                   : "flex flex-col items-center text-xl "
               }
             >
               <div
                 className={
                   type === items.id &&
-                  "absolute -top-3 w-full h-2 border-t-2 border-zomato-400"
+                  "absolute -top-3 w-full h-2 border-t-2 border-cravemate-400"
                 }
               />
               {items.icon}
@@ -100,7 +100,7 @@ const LargeTabs = () => {
               className={classnames(
                 "flex items-center gap-3 pb-2 transition duration-700 ease-in-out",
                 {
-                  "border-b-2 border-zomato-400": type === items.id,
+                  "border-b-2 border-cravemate-400": type === items.id,
                 }
               )}
             >
@@ -121,7 +121,7 @@ const LargeTabs = () => {
               <h3
                 className={
                   type === items.id
-                    ? "text-xl text-zomato-400"
+                    ? "text-xl text-cravemate-400"
                     : "text-xl text-gray-700"
                 }
               >

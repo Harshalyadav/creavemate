@@ -6,6 +6,8 @@ import { RiSearch2Line } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import gravatar from "gravatar";
 
+
+
 // components
 // import SignIn from "../Auth/SignIn";
 import SignIn from "../Auth/SingIn";
@@ -15,6 +17,9 @@ import SignUp from "../Auth/SingUp";
 import { signOut } from "../../Redux/Reducer/Auth/Auth.action";
 
 const MobileNav = ({ SignIn, SignUp }) => {
+
+
+  const logo = "/cravematelogo.png"; 
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -26,13 +31,13 @@ const MobileNav = ({ SignIn, SignUp }) => {
     <div className="flex w-full items-center justify-between lg:hidden">
       <div className="w-28">
         <img
-          src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+          src={logo}
           alt="logo"
           className="w-full h-full"
         />
       </div>
       <div className="flex items-center gap-3 relative">
-        <button className="bg-zomato-400 text-white py-2 px-3 rounded-full">
+        <button className="bg-cravemate-400 text-white py-2 px-3 rounded-full">
           Use App
         </button>
         {reduxState?.user?.fullname ? (
@@ -40,7 +45,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
             {" "}
             <div
               onClick={() => setIsDropDownOpen((prev) => !prev)}
-              className="border p-2 border-gray-300 text-zomato-400 w-20 h-20 rounded-full"
+              className="border p-2 border-gray-300 text-cravemate-400 w-20 h-20 rounded-full"
             >
               <img
                 src={gravatar.url(reduxState?.user?.email)}
@@ -58,7 +63,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
           <>
             <span
               onClick={() => setIsDropDownOpen((prev) => !prev)}
-              className="border p-2 border-gray-300 text-zomato-400 rounded-full"
+              className="border p-2 border-gray-300 text-cravemate-400 rounded-full"
             >
               <FaUserAlt />
             </span>
@@ -78,6 +83,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
 };
 
 const LargeNav = ({ SignIn, SignUp }) => {
+  const logo = "/cravematelogo.png"; 
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const dispatch = useDispatch();
   const reduxState = useSelector((global) => global.user.user);
@@ -89,14 +95,14 @@ const LargeNav = ({ SignIn, SignUp }) => {
         <div className="hidden gap-4 w-full items-center justify-around lg:flex ">
           <div className="w-28">
             <img
-              src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+              src={logo}
               alt="logo"
               className="w-full h-full"
             />
           </div>
           <div className=" w-3/4 bg-white shadow-md p-3 flex items-center gap-3  border border-gray-200 rounded">
             <div className="flex items-center gap-2 border-r-2 border-gray-300 pr-2">
-              <span className="text-zomato-400">
+              <span className="text-cravemate-400">
                 <HiLocationMarker />
               </span>
               <input
@@ -120,7 +126,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
               {" "}
               <div
                 onClick={() => setIsDropDownOpen((prev) => !prev)}
-                className="border p-2 border-gray-300 text-zomato-400 w-full h-20 rounded-full"
+                className="border p-2 border-gray-300 text-cravemate-400 w-full h-20 rounded-full"
               >
                 <img
                   src={gravatar.url(reduxState?.user?.email)}

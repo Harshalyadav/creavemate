@@ -13,7 +13,7 @@ import RestaurantInfo from "../Components/restaurant/RestaurantInfo";
 import TabContainer from "../Components/restaurant/Tabs";
 import CartContainer from "../Components/Cart/CartContainer";
 
-import {restaurantData} from "../Components/Delivery/index"
+import {restaurantData} from "../../src/RestaurantData";
 // Redux actions
 import { getSpecificRestaurant } from "../Redux/Reducer/restaurant/restaurant.action";
 import { getImage } from "../Redux/Reducer/Image/Image.action";
@@ -32,22 +32,22 @@ const RestaurantLayout = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // dispatch(getSpecificRestaurant(id)).then((data) => {
-    //   setRestaurant((prev) => ({
-    //     ...prev,
-    //     ...data.payload.restaurant,
-    //   }));
+    dispatch(getSpecificRestaurant(id)).then((data) => {
+      setRestaurant((prev) => ({
+        ...prev,
+        ...data.payload.restaurant,
+      }));
 
 
-      // dispatch(getImage(data.payload.restaurant?.photos)).then((data) =>{
+      dispatch(getImage(data.payload.restaurant?.photos)).then((data) =>{
            
-      //   // setRestaurant((prev) => ({ ...prev, ...data.payload.image}))
-      // }
-      // );
-    // });
-   setRestaurant(restaurantData.map((data)=>data.name));
-   console.log("restaurantDetaile",restaurantData.map((data)=>data.name));
-   console.log("restuarant",restaurant);
+        setRestaurant((prev) => ({ ...prev, ...data.payload.image}))
+      }
+      );
+    });
+  //  setRestaurant(restaurantData.map((data)=>data.name));
+  //  console.log("restaurantDetaile",restaurantData.map((data)=>data.name));
+  //  console.log("restuarant",restaurant);
     // dispatch(getCart());
   }, []);
 

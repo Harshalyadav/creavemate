@@ -5,7 +5,7 @@ function UserDropdown() {
   return (
     <Menu>
       <Menu.Button>
-        <span className="border p-2 border-gray-300 text-zomato-400 rounded-full">
+        <span className="border p-2 border-gray-300 text-cravemate-400 rounded-full">
           <FaUserAlt />
         </span>
       </Menu.Button>

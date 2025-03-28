@@ -91,7 +91,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                         value={userData.fullname}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
+                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-cravemate-400"
                       />
                     </div>
                     <div className=" w-full flex flex-col gap-2">
@@ -102,7 +102,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                         value={userData.email}
                         onChange={handleChange}
                         placeholder="email@email.com"
-                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
+                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-cravemate-400"
                       />
                     </div>
                     <div className=" w-full flex flex-col gap-2">
@@ -113,12 +113,12 @@ export default function SignUp({ isOpen, setIsOpen }) {
                         value={userData.password}
                         onChange={handleChange}
                         placeholder="*********"
-                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
+                        className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-cravemate-400"
                       />
                     </div>
                     <div
                       onClick={submit}
-                      className="w-full  text-center bg-zomato-400 text-white py-2 rounded-lg"
+                      className="w-full  text-center bg-cravemate-400 text-white py-2 rounded-lg"
                     >
                       Sign up
                     </div>

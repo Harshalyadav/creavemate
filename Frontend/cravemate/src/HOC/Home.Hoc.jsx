@@ -36,14 +36,11 @@ import HomeLayout from "../Layout/Home.layout";
 
 const HomeLayoutHOC = ({ component: Component, ...rest }) => {
   return (
-    // <Route
-    //   {...rest}
-    //   element={
+   
         <HomeLayout>
           <Component />
         </HomeLayout>
-    //   }
-    // />
+
   );
 };
 

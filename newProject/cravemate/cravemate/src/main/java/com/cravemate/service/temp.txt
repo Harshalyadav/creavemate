@@ -1,0 +1,39 @@
+public class FooditemDetails {
+    private int restaurantid;
+    private FoodItem foodItem;
+    public int getRestaurantid() {
+        return restaurantid;
+    }
+    public void setRestaurantid(int restaurantid) {
+        this.restaurantid = restaurantid;
+    }
+    public FoodItem getFi() {
+        return foodItem;
+    }
+    public void setFi(FoodItem foodItem) {
+        this.foodItem = foodItem;
+    }
+    public FooditemDetails(int restaurantid, FoodItem foodItem) {
+        this.restaurantid = restaurantid;
+        this.foodItem = foodItem;
+    }
+
+
+     public ResponseEntity<List<FooditemDetails>> getAllFoodItems() {
+
+        List<FoodItem> foodItem = foodItemRepo.findAll();
+        ListIterator<FoodItem> itr = foodItem.listIterator();
+        List<FooditemDetails> fid=new ArrayList<FooditemDetails>();
+
+        while (itr.hasNext()) {
+            FoodItem fooditem = itr.next();
+
+            RestaurantInfo ri=fooditem.getRestaurantInfo();
+            FooditemDetails fs=new FooditemDetails(ri.getRestaurantid(), fooditem);
+            fid.add(fs);
+
+
+        }
+        return ResponseEntity.ok().body(fid);
+
+    }

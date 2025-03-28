@@ -51,7 +51,7 @@ const addFoodToCart = () => {
                 <button
                   onClick={addFoodToCart}
                   disabled={food.isAddedToCart}
-                  className=" md:hidden flex items-center gap-2 text-zomato-400 bg-zomato-50 border border-zomato-400 px-2 py-1 rounded-lg"
+                  className=" md:hidden flex items-center gap-2 text-cravemate-400 bg-cravemate-50 border border-cravemate-400 px-2 py-1 rounded-lg"
                 >
                   {food.isAddedToCart ? (
                     "Added"
@@ -70,7 +70,7 @@ const addFoodToCart = () => {
               <button
                 onClick={addFoodToCart}
                 disabled={food.isAddedToCart}
-                className=" flex items-center gap-2 text-zomato-400 bg-zomato-50 border border-zomato-400 px-4 py-2 rounded-lg"
+                className=" flex items-center gap-2 text-cravemate-400 bg-cravemate-50 border border-cravemate-400 px-4 py-2 rounded-lg"
               >
                 {food.isAddedToCart ? (
                   "Added"

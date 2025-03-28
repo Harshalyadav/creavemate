@@ -37,6 +37,8 @@ function App() {
   }, [dispatch]);
 
   return (
+    <>
+   
     <Routes>
       {/* Redirect from "/" to "/delivery" */}
       <Route path="/" element={<Navigate to="/delivery" />} />
@@ -44,7 +46,7 @@ function App() {
       {/* Restaurant routes */}
       <Route path="/restaurant/:id" element={<RedirectRestaurant />} />
       <Route
-        path="/restaurant/:id/overview"
+        path="/restaurant/:id/overview/*"
         element={<RestaurantLayoutHOC component={Overview} />}
       />
       <Route
@@ -82,6 +84,8 @@ function App() {
         element={<HomeLayoutHOC component={GoogleAuth} />}
       />
     </Routes>
+    </>
+   
   );
 }
 

@@ -17,12 +17,12 @@ export default function AddressList(props) {
                 className={({ active, checked }) =>
                   `${
                     active
-                      ? 'ring-2 ring-offset-2 ring-offset-zomato-300 ring-white ring-opacity-60'
+                      ? 'ring-2 ring-offset-2 ring-offset-cravemate-300 ring-white ring-opacity-60'
                       : ''
                   }
                   ${
                     checked
-                      ? 'bg-zomato-100 bg-opacity-75 text-zomato-600'
+                      ? 'bg-cravemate-100 bg-opacity-75 text-cravemate-600'
                       : 'bg-white'
                   }
                     relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none`
@@ -36,7 +36,7 @@ export default function AddressList(props) {
                           <RadioGroup.Label
                             as="p"
                             className={`font-medium  ${
-                              checked ? 'text-zomato-600' : 'text-gray-900'
+                              checked ? 'text-cravemate-600' : 'text-gray-900'
                             }`}
                           >
                             {item.name}
@@ -44,7 +44,7 @@ export default function AddressList(props) {
                           <RadioGroup.Description
                             as="span"
                             className={`inline ${
-                              checked ? 'text-zomato-500' : 'text-gray-500'
+                              checked ? 'text-cravemate-500' : 'text-gray-500'
                             }`}
                           >
                             <address>{item.address}</address>
@@ -52,7 +52,7 @@ export default function AddressList(props) {
                         </div>
                       </div>
                       {checked && (
-                        <div className="flex-shrink-0 text-zomato-900">
+                        <div className="flex-shrink-0 text-cravemate-900">
                           <CheckIcon className="w-6 h-6" />
                         </div>
                       )}
